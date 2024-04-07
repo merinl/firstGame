@@ -18,3 +18,29 @@ function getComputerChoice(){
     }
 }
 console.log(getComputerChoice());
+
+// create a function that compares the user input and computer choice
+function compare(playerSelection, computerSelection){
+
+    // assigning the userInput value and random pick by computer to the parameters
+    playerSelection = userInput;
+    computerSelection = getComputerChoice();
+
+    // create else if for comparison and output of win or loss
+    if(playerSelection == computerSelection){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- TIE`;
+    }else if(playerSelection == 'rock' && computerSelection == 'paper'){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- YOU LOST`;
+    }else if(playerSelection == 'paper' && computerSelection == 'rock'){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- YOU WON`;
+    }else if(playerSelection == 'rock' && computerSelection == 'scissor'){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- YOU WON`;
+    }else if(playerSelection == 'scissor' && computerSelection == 'rock'){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- YOU LOST`;
+    }else if(playerSelection == 'scissor' && computerSelection == 'paper'){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- YOU WON`;
+    }else if(playerSelection == 'paper' && computerSelection == 'scissor'){
+        return `You'r choice -- ${playerSelection} --and-- Computer choice -- ${computerSelection} ------- YOU LOST`;
+    }
+
+}
