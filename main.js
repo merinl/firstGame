@@ -1,6 +1,8 @@
 // output to enter player's choice
-let userInput = prompt("Let's play rock, paper, scissor; ------ enter your choice:", "");
-
+let playerInput = prompt("Let's play rock, paper, scissor; ------ enter your choice:", "");
+// enabling case insensitive of the input
+let userInput = playerInput.toLocaleLowerCase();
+console.log(userInput);
 
 // create a var that stores random output from 0 - 0.99
 let randomOutput = Math.random();
@@ -44,3 +46,5 @@ function compare(playerSelection, computerSelection){
     }
 
 }
+console.log(compare());
+
