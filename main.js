@@ -1,7 +1,3 @@
-// output to enter player's choice
-let playerInput = prompt("Let's play rock, paper, scissor; ------ enter your choice:", "");
-
-
 // create a var that stores random output from 0 - 0.99
 let randomOutput = Math.random();
 
@@ -17,14 +13,18 @@ function getComputerChoice(){
         return 'scissor';
     }
 }
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
 
-// enabling case insensitive of the input
-let userInput = playerInput.toLocaleLowerCase();
-console.log(userInput);
+
 
 // create a function that compares the user input and computer choice
 function compare(playerSelection, computerSelection){
+    // output to enter player's choice
+    let playerInput = prompt("Let's play rock, paper, scissor; ------ enter your choice:", "");
+
+    // enabling case insensitive of the input
+let userInput = playerInput.toLocaleLowerCase();
+// console.log(userInput);
 
     // assigning the userInput value and random pick by computer to the parameters
     playerSelection = userInput;
@@ -48,5 +48,14 @@ function compare(playerSelection, computerSelection){
     }
 
 }
-console.log(compare());
+// console.log(compare());
 
+function playGame(){
+    return compare();
+}
+// play 5 times
+console.log(playGame());
+console.log(playGame());
+console.log(playGame());
+console.log(playGame());
+console.log(playGame());
